@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f7fb;
+  --bg-soft: #eef3f9;
+  --card: rgba(255, 255, 255, 0.92);
+  --text: #223046;
+  --text-soft: #5e718d;
+  --title: #132238;
+
+  --primary: #2f6fdb;
+  --primary-soft: #5d93ea;
+  --primary-light: #dfeafb;
+  --primary-warm: #7ea6e8;
+
+  --border: rgba(47, 111, 219, 0.14);
+  --shadow: 0 18px 45px rgba(40, 84, 158, 0.10);
+  --shadow-soft: 0 10px 28px rgba(40, 84, 158, 0.08);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(126, 166, 232, 0.18), transparent 24%),
+    radial-gradient(circle at top right, rgba(93, 147, 234, 0.14), transparent 18%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #245fc2 0%, #3e7ae2 55%, #7ea6e8 100%);
+  color: white;
+  padding: 72px 24px 118px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  box-shadow: 0 14px 30px rgba(41, 82, 153, 0.16);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.18), transparent 22%),
+    radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.14), transparent 18%),
+    radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.10), transparent 28%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+}
+
+.hero h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  max-width: 720px;
+  margin-bottom: 16px;
+}
+
+.hero-lead {
+  max-width: 760px;
+  font-size: 1.08rem;
+  color: rgba(245, 249, 255, 0.94);
+  margin-bottom: 28px;
+}
+
+.hero-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1120px;
+}
+
+.summary-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(20, 47, 94, 0.08);
+}
+
+.summary-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 8px;
+  color: rgba(240, 247, 255, 0.86);
+}
+
+.summary-card p {
+  font-size: 0.95rem;
+  color: rgba(248, 251, 255, 0.94);
+}
+
+.container {
+  max-width: 1120px;
+  margin: -58px auto 0;
+  padding: 0 24px 42px;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-card,
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.intro-card {
+  padding: 30px;
+  margin-bottom: 24px;
+}
+
+.intro-badge,
+.section-kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+.intro-card h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: var(--title);
+  margin: 14px 0 14px;
+}
+
+.intro-card p {
+  color: var(--text-soft);
+  max-width: 940px;
+  margin-bottom: 12px;
+}
+
+.card {
+  padding: 26px;
+  margin-bottom: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.intro-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 45px rgba(40, 84, 158, 0.12);
+}
+
+.featured-card {
+  padding: 28px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.45rem;
+  color: var(--title);
+  margin-top: 10px;
+}
+
+.section-text {
+  color: var(--text-soft);
+  max-width: 420px;
+}
+
+.iframe-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(135deg, #ebf3ff, #dfeafb);
+  border: 1px solid rgba(47, 111, 219, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  min-height: 580px;
+  display: block;
+  border: none;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.dashboard-note {
+  margin-top: 14px;
+  color: var(--text-soft);
+  font-size: 0.94rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.styled-list {
+  list-style: none;
+  margin-top: 14px;
+}
+
+.styled-list li {
+  position: relative;
+  padding: 14px 0 14px 24px;
+  border-bottom: 1px solid rgba(47, 111, 219, 0.08);
+  color: var(--text);
+}
+
+.styled-list li:last-child {
+  border-bottom: none;
+}
+
+.styled-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-soft));
+  box-shadow: 0 0 0 4px rgba(93, 147, 234, 0.14);
+}
+
+.placeholder-box {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(223, 234, 251, 0.44), rgba(235, 243, 255, 0.68));
+  border: 1px dashed rgba(47, 111, 219, 0.22);
+  color: var(--text-soft);
+}
+
+@media (max-width: 960px) {
+  .hero-summary,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .iframe-wrapper iframe {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 52px 16px 90px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .container {
+    padding: 0 16px 28px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-lead {
+    font-size: 0.98rem;
+  }
+
+  .intro-card,
+  .card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .intro-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .iframe-wrapper {
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .iframe-wrapper iframe {
+    min-height: 320px;
+    border-radius: 10px;
+  }
+}
