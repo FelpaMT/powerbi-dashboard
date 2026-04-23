@@ -335,3 +335,18 @@ body {
     border-radius: 10px;
   }
 }
+.conclusion-card {
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.conclusion-content {
+  margin-top: 12px;
+}
+
+.conclusion-content p {
+  color: var(--text-soft);
+  margin-bottom: 14px;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
